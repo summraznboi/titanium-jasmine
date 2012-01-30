@@ -1,9 +1,10 @@
 (function() {
-    
+    var jasmine = require('/test/lib/jasmine-1.1.0');
+
     if (!jasmine) {
         throw new Exception("jasmine library does not exist in global namespace!");
     }
-    
+
     /**
 	* TitaniumReporter, by Guilherme Chapiewski - http://guilhermechapiewski.com
 	*
