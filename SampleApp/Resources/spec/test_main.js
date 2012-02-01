@@ -8,7 +8,7 @@
 
     // To learn how to write Jasmine tests, please read Jasmine documentation:
     // https://github.com/pivotal/jasmine/wiki
-    
+
     describe('sampleapp.main', function() {
 
 	it('should return correct result', function() {
@@ -17,7 +17,7 @@
 	
 	it('should fail', function() {
 	    expect(sampleapp.myMethod()).toBeFalsy();
-	});	
+	});
 	
 	it('should fail with other error messages', function() {
 	    expect(sampleapp.myMethod()).toBe('the result');
@@ -41,5 +41,5 @@
 	});
 
     });
-    
+
 })();
