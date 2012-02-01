@@ -21,8 +21,8 @@ run:
 		echo "Please run \"make run-[iphone|ipad]\" instead.";\
 		exit 1;\
 	fi
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/test/
-	@echo "" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/test/enabled.js
+	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/
+	@echo "" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/enabled.js
 	@make launch-titanium
 
 test:
@@ -30,8 +30,8 @@ test:
 		echo "Please run \"make test-[iphone|ipad]\" instead.";\
 		exit 1;\
 	fi
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/test/
-	@echo "sampleapp.tests_enabled = true;" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/test/enabled.js
+	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/
+	@echo "sampleapp.tests_enabled = true;" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/enabled.js
 	@make launch-titanium
 
 clean:
