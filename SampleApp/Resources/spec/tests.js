@@ -1,10 +1,10 @@
 (function(){
 	if (sampleapp.tests_enabled) {
-		var jasmine = require('/test/lib/jasmine-1.1.0');
-		Ti.include('/test/lib/jasmine-titanium.js');
+		var jasmine = require('/spec/lib/jasmine-1.1.0');
+		Ti.include('/spec/lib/jasmine-titanium.js');
 		
 		// Include all the test files
-		Ti.include('/test/test_main.js');
+		Ti.include('/spec/test_main.js');
 
 		for (name in jasmine) {
 			Titanium.API.debug(name);

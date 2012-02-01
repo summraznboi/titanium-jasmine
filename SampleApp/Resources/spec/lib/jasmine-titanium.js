@@ -1,5 +1,5 @@
 (function() {
-    var jasmine = require('/test/lib/jasmine-1.1.0');
+    var jasmine = require('/spec/lib/jasmine-1.1.0');
 
     if (!jasmine) {
         throw new Exception("jasmine library does not exist in global namespace!");

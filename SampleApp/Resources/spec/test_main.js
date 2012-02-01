@@ -1,9 +1,9 @@
 (function(){
-    var j = require('/test/lib/jasmine-1.1.0');
+    var j = require('/spec/lib/jasmine-1.1.0');
 
     // I don't like this at all, but it beats having to call 'jasmine.it()' or 'jasmine.expect()' all the freaking time.
     for (name in j) {
-	this[name] = j[name];
+		this[name] = j[name];
     }
 
     // To learn how to write Jasmine tests, please read Jasmine documentation:
@@ -33,6 +33,11 @@
 	
 	it('should not break with tests cantaining a huge amount of nonsense text in the test title', function() {
 	    expect(true).toBe(false);
+	});
+
+
+	it('returns 5', function() {
+	    expect(sampleapp.returnFive()).toBe(5);
 	});
 
     });

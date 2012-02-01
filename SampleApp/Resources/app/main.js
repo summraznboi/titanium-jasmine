@@ -65,9 +65,13 @@ var sampleapp = {
 		return true;
 	};
 	
+	sampleapp.returnFive = function() {
+		return 5;
+	};
+
 })();
 
 Ti.include(
-	'/test/enabled.js',
-	'/test/tests.js'
+	'/spec/enabled.js',
+	'/spec/tests.js'
 );
