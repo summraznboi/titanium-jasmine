@@ -5,7 +5,7 @@
 
 # Customize these variables
 IPHONE_SDK_VERSION="5.0"
-TI_SDK_VERSION="1.8.0.1"
+TI_SDK_VERSION="1.8.2"
 TI_DIR="~/Library/Application\ Support/Titanium"
 
 ANDROID_API_LEVEL="10" #the API level of the targeted emulator
