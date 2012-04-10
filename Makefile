@@ -1,7 +1,6 @@
 # Makefile to start Titanium Mobile project from the command line.
 # More info at http://github.com/guilhermechapiewski/titanium-jasmine
 
-PROJECT_NAME=SampleApp
 PROJECT_ROOT=$(shell pwd)
 
 run-iphone:
@@ -27,8 +26,8 @@ run:
 		echo "Please run \"make run-[iphone|ipad]\" instead.";\
 		exit 1;\
 	fi
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/
-	@echo "" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/enabled.js
+	@mkdir -p ${PROJECT_ROOT}/Resources/spec/
+	@echo "" > ${PROJECT_ROOT}/Resources/spec/enabled.js
 	@make launch-titanium
 
 test:
@@ -36,16 +35,16 @@ test:
 		echo "Please run \"make test-[iphone|ipad]\" instead.";\
 		exit 1;\
 	fi
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/
-	@echo "sampleapp.tests_enabled = true;" > ${PROJECT_ROOT}/${PROJECT_NAME}/Resources/spec/enabled.js
+	@mkdir -p ${PROJECT_ROOT}/Resources/spec/
+	@echo "exports.tests_enabled = true;" > ${PROJECT_ROOT}/Resources/spec/enabled.js
 	@make launch-titanium
 
 clean:
-	@rm -rf ${PROJECT_ROOT}/${PROJECT_NAME}/build/iphone/*
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/build/iphone/
-	@echo "Deleted: ${PROJECT_ROOT}/${PROJECT_NAME}/build/iphone/*"
+	@rm -rf ${PROJECT_ROOT}/build/iphone/*
+	@mkdir -p ${PROJECT_ROOT}/build/iphone/
+	@echo "Deleted: ${PROJECT_ROOT}/build/iphone/*"
 
 launch-titanium:
 	@echo "Building with Titanium... (DEVICE_TYPE:${DEVICE_TYPE})"
-	@mkdir -p ${PROJECT_ROOT}/${PROJECT_NAME}/build/iphone/
-	@PROJECT_NAME=${PROJECT_NAME} PROJECT_ROOT=${PROJECT_ROOT} DEVICE_TYPE=${DEVICE_TYPE} bash ${PROJECT_ROOT}/bin/titanium.sh
+	@mkdir -p ${PROJECT_ROOT}/build/iphone/
+	@PROJECT_ROOT=${PROJECT_ROOT} DEVICE_TYPE=${DEVICE_TYPE} bash ${PROJECT_ROOT}/bin/titanium.sh
