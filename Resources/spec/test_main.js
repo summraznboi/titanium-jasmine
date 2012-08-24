@@ -1,6 +1,6 @@
 // I don't like this at all, but it beats having to call
 // 'jasmine.it()' or 'jasmine.expect()' all the freaking time.
-var j = require('spec/lib/jasmine-1.1.0');
+var j = require('spec/lib/jasmine-1.2.0');
 var methods = ['spyOn',
                'it',
                'xit',
